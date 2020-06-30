@@ -1,0 +1,28 @@
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<!-- configFragment 선언 -->
+<th:block th:fragment="configFragment">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="shortcut icon" th:href="@{/images/favicon.ico}">
+	<title>스프링부트 템플릿</title>
+	
+	<link id="contextPathHolder" th:data-contextPath="${#httpServletRequest.getContextPath()}"/>
+	
+	<!-- Global stylesheets -->
+	<!-- /Global stylesheets -->
+	
+	<!-- Themes stylesheets -->
+	<!-- /Themes stylesheets -->
+		
+	<!-- Common stylesheets -->
+	<link th:href="@{/css/common/common.css}" rel="stylesheet"/>
+	<!-- /Common stylesheets -->
+
+	<!-- Content Page의 CSS fragment 삽입 -->
+	<th:block layout:fragment="css"></th:block>
+	
+</th:block>
+</html>
